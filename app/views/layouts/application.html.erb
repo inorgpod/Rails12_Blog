@@ -10,6 +10,37 @@
   </head>
 
   <body>
+  <div id="sidebar">
+      <div id="logo">
+        <%= link_to root_path do %>
+          <%= image_tag "logo.svg" %>
+        <%end%>
+      </div>
+
+    <ul>
+      <li class= "category"> Website </li>
+      <li> <%= link_to "Blog", root_path %> </li>
+      <li> About</li>
+    </ul>
+
+    <ul>
+      <li class="category"> Social</li>
+      <li><a href= "https://github.com/inorgpod"> GitHub </a></li>
+      <li><a href= "/"> link </a></li>
+      <li><a href= "/"> link </a></li>
+      <li><a href= "/"> link </a></li>
+    </ul>
+  </div>
+
+  <div id="main_content">
+    <div id="header">
+      <p>ALL POSTS</p>
+      <div class="buttons">
+        <button class="button"><%= link_to "New Post", new_post_path %></button>
+        <button class="button"> Log Out </button>
+      </div>
+    </div>
+  </div>
     <%= yield %>
   </body>
 </html>
